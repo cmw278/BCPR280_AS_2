@@ -6,6 +6,26 @@
 
 ---
 
+#### A quick word on building with [Travis](https://travis-ci.org/cmw278/BCPR280_AS_2)
+
+I thought it would be a great time to start looking into more extensive version control and build control than I'm used before, especially with my introduction to NodeJS. I ran into a little hiccup where the default node version was nowhere near the lts and thus not the same version as in my dev environment. This caused an issue convincing jasmine unit tests to run. My eventual fix (*after some trial and error*) was to add the following lines to .travis.yml:
+
+``` yaml
+node_js:
+  - "lts/*"
+```
+
+These next lines also ensure package dependencies are properly met:
+
+``` yaml
+before_script:
+  - npm install
+```
+
+---
+
+#### Contents:
+
 Task
 [:one:](#1)
 [:two:](#2)
