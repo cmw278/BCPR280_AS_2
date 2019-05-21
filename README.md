@@ -1,11 +1,7 @@
 # [BCPR280_AS_2](https://github.com/cmw278/BCPR280_AS_2/)
 ### :bust_in_silhouette: By [Chris Wordsworth](https://github.com/cmw278/)
 
----
-
-LOC | File
----:|:-----
-0   | Total
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ---
 

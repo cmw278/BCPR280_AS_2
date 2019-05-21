@@ -1,0 +1,31 @@
+{
+  "name": "bcpr280_as_2",
+  "version": "1.0.0",
+  "description": "Portfolio assignment completed during the third semester of my bachelor's degree",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmw278/BCPR280_AS_2.git"
+  },
+  "keywords": [
+    "node",
+    "vue",
+    "correlation",
+    "regression"
+  ],
+  "author": "Chris Wordsworth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmw278/BCPR280_AS_2/issues"
+  },
+  "homepage": "https://github.com/cmw278/BCPR280_AS_2#readme",
+  "devDependencies": {
+    "standard": "^12.0.1"
+  },
+  "dependencies": {
+    "jasmine": "^3.4.0"
+  }
+}
