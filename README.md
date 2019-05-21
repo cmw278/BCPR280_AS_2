@@ -2,7 +2,7 @@
 ### :bust_in_silhouette: By [Chris Wordsworth](https://github.com/cmw278/)
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![Build Status](https://travis-ci.org/cmw278/BCPR280_AS_2.svg?branch=master)](https://travis-ci.org/cmw278/BCSE102_AS_2)
+[![Build Status](https://travis-ci.org/cmw278/BCPR280_AS_2.svg?branch=master)](https://travis-ci.org/cmw278/BCPR280_AS_2)
 
 ---
 
