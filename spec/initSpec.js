@@ -4,4 +4,8 @@ describe('Welcome to my first NodeJS Unit Test', () => {
     expect(true).toBe(true)
     expect(true).not.toBe(false)
   }) // Should succeed
+  it('This test should fail', () => {
+    expect(true).toBe(false)
+    expect(true).not.toBe(true)
+  }) // Should fail
 })
