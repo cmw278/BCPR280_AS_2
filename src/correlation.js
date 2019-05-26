@@ -19,14 +19,7 @@ exports.Correlation = class Correlation {
     return (n * sumXY - x.sum * y.sum) /
       Math.sqrt(x.variance * y.variance)
   }
-  get roundedR () {
-    return this.round(this.r)
-  }
   get rSquared () {
-    return this.round(this.r ** 2)
-  }
-  round (n, targetDp = 9) {
-    let multiplier = 10 ** targetDp
-    return Math.round(n * multiplier) / multiplier
+    return this.r ** 2
   }
 }
