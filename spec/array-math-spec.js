@@ -1,4 +1,4 @@
-/* global describe it xit expect spyOnProperty beforeEach jasmine */
+/* global describe it expect spyOnProperty beforeEach jasmine */
 const { ArrayMath } = require('../src/array-math')
 describe('ArrayMath class', () => {
   var actual
@@ -13,7 +13,7 @@ describe('ArrayMath class', () => {
     expect(actual).toEqual(jasmine.any(Array))
     expect(actual).toEqual([ 1, 2, 3, 4, 5 ])
   }) // Accessible array
-  xit('should have getters defined', () => {
+  it('should have getters defined', () => {
     // Spies
     const spySum = spyOnProperty(actual, 'sum', 'get')
       .and.returnValue('sum requested')
@@ -25,10 +25,10 @@ describe('ArrayMath class', () => {
     expect(actual.sum).toBe('sum requested')
     expect(spySum).toHaveBeenCalled()
 
-    expect(actual.SquareSum).toBe('squareSum requested')
+    expect(actual.squareSum).toBe('squareSum requested')
     expect(spySquareSum).toHaveBeenCalled()
   }) // Getters
-  xit('getters should return correct values', () => {
+  it('getters should return correct values', () => {
     expect(actual.sum).toEqual(15)
     expect(actual.squareSum).toEqual(55)
   }) // Getter values

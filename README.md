@@ -43,8 +43,8 @@ Task
 <span id="1" hidden></span>
 
   - [ ] :one: Write a program that calculates the correlation of two arrays of numbers
-    - [ ] :mag: Analysis & design
-    - [ ] :memo: Unit testing plan
+    - [x] :mag: Analysis & design
+    - [x] :memo: Unit testing plan
     - [ ] :pen: Write Code
     - [ ] :coffee: Run unit tests
     - [ ] :mortar_board: Complete documentation
