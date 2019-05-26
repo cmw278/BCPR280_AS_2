@@ -1,5 +1,5 @@
 /* global describe it xit expect spyOnProperty beforeEach jasmine */
-const { ArrayMath } = require('../src/array-math.js')
+const { ArrayMath } = require('../src/array-math')
 describe('ArrayMath class', () => {
   var actual
   beforeEach(() => {
@@ -31,5 +31,5 @@ describe('ArrayMath class', () => {
   xit('getters should return correct values', () => {
     expect(actual.sum).toEqual(15)
     expect(actual.squareSum).toEqual(55)
-  })
+  }) // Getter values
 }) // First describe
