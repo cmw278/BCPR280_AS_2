@@ -42,12 +42,12 @@ Task
 
 <span id="1" hidden></span>
 
-  - [ ] :one: Write a program that calculates the correlation of two arrays of numbers
+  - [x] :one: Write a program that calculates the correlation of two arrays of numbers
     - [x] :mag: Analysis & design
     - [x] :memo: Unit testing plan
-    - [ ] :pen: Write Code
-    - [ ] :coffee: Run unit tests
-    - [ ] :mortar_board: Complete documentation
+    - [x] :pen: Write Code
+    - [x] :coffee: Run unit tests
+    - [x] :mortar_board: Complete documentation
 
 ---
 
@@ -123,7 +123,7 @@ Task
 <span id="9" hidden></span>
 
   - [ ] :nine: Provide Jasminejs unit tests
-    - [ ] :chart_with_upwards_trend: Correlation
+    - [x] :chart_with_upwards_trend: Correlation
     - [ ] :chart_with_downwards_trend: Regression
 
 ---

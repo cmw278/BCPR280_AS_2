@@ -1,6 +1,6 @@
-/* global describe it xit expect spyOnProperty beforeEach */
+/* global describe it expect spyOnProperty beforeEach */
 const { Correlation } = require('../src/correlation')
-describe('Correlation class', () => {
+describe('Correlation class:', () => {
   var actual
   beforeEach(() => {
     var x = [ 160, 591, 114, 229, 230, 270, 128, 1657, 624, 1503 ]
@@ -16,13 +16,25 @@ describe('Correlation class', () => {
     }
     expect(throwMe).toThrow()
   }) // Array length error
-  xit('should have getters defined', () => {
+  it('should have functions declared', () => {
+    expect(typeof actual.round).toBe('function')
+  }) // Function declaration
+  describe('function:', () => {
+    it('round should round to specified number of decimal places', () => {
+      expect(actual.round(0.123456789, 3)).toEqual(0.123)
+      expect(actual.round(0.12345678910)).toEqual(0.123456789) // Default 9 dp
+    }) // round()
+  }) // function tests
+  it('should have getters defined', () => {
     // Spies
     const spySumXY = spyOnProperty(actual, 'sumXY', 'get')
       .and.returnValue('sumXY requested')
 
     const spyR = spyOnProperty(actual, 'r', 'get')
       .and.returnValue('r requested')
+
+    const spyRoundedR = spyOnProperty(actual, 'roundedR', 'get')
+      .and.returnValue('roundedR requested')
 
     const spyRSquared = spyOnProperty(actual, 'rSquared', 'get')
       .and.returnValue('rSquared requested')
@@ -34,12 +46,16 @@ describe('Correlation class', () => {
     expect(actual.r).toBe('r requested')
     expect(spyR).toHaveBeenCalled()
 
+    expect(actual.roundedR).toBe('roundedR requested')
+    expect(spyRoundedR).toHaveBeenCalled()
+
     expect(actual.rSquared).toBe('rSquared requested')
     expect(spyRSquared).toHaveBeenCalled()
   }) // Getters
-  xit('getters should return correct values', () => {
+  it('getters should return correct values', () => {
     expect(actual.sumXY).toEqual(6731722)
-    expect(actual.r).toEqual(0.997834067)
+    expect(actual.r).toBeCloseTo(0.997834067)
+    expect(actual.roundedR).toEqual(0.997834067)
     expect(actual.rSquared).toEqual(0.995672824)
   }) // Getter values
 }) // First describe
