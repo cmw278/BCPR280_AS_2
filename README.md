@@ -53,12 +53,12 @@ Task
 
 <span id="2" hidden></span>
 
-  - [ ] :two: Adapt / extend the first program to calculate the regression of two arrays of numbers.
-    - [ ] :mag: Analysis & design
-    - [ ] :memo: Unit testing plan
-    - [ ] :pen: Write Code
-    - [ ] :coffee: Run unit tests
-    - [ ] :mortar_board: Complete documentation
+  - [x] :two: Adapt / extend the first program to calculate the regression of two arrays of numbers.
+    - [x] :mag: Analysis & design
+    - [x] :memo: Unit testing plan
+    - [x] :pen: Write Code
+    - [x] :coffee: Run unit tests
+    - [x] :mortar_board: Complete documentation
 
 ---
 
@@ -122,9 +122,9 @@ Task
 
 <span id="9" hidden></span>
 
-  - [ ] :nine: Provide Jasminejs unit tests
+  - [x] :nine: Provide Jasminejs unit tests
     - [x] :chart_with_upwards_trend: Correlation
-    - [ ] :chart_with_downwards_trend: Regression
+    - [x] :chart_with_downwards_trend: Regression
 
 ---
 

@@ -13,30 +13,28 @@ describe('ArrayMath class', () => {
     expect(actual).toEqual(jasmine.any(Array))
     expect(actual).toEqual([ 1, 2, 3, 4, 5 ])
   }) // Accessible array
-  it('should have getters defined', () => {
-    // Spies
+  it('should have sum getter', () => {
     const spySum = spyOnProperty(actual, 'sum', 'get')
-      .and.returnValue('sum requested')
-
-    const spySquareSum = spyOnProperty(actual, 'squareSum', 'get')
-      .and.returnValue('squareSum requested')
-
-    const spyVariance = spyOnProperty(actual, 'variance', 'get')
-      .and.returnValue('variance requested')
-
-    // Results
-    expect(actual.sum).toBe('sum requested')
-    expect(spySum).toHaveBeenCalled()
-
-    expect(actual.squareSum).toBe('squareSum requested')
-    expect(spySquareSum).toHaveBeenCalled()
-
-    expect(actual.variance).toBe('variance requested')
-    expect(spyVariance).toHaveBeenCalled()
-  }) // Getters
-  it('getters should return correct values', () => {
+      .and.callThrough()
     expect(actual.sum).toEqual(15)
+    expect(spySum).toHaveBeenCalled()
+  }) // sum
+  it('should have mean getter', () => {
+    const spyMean = spyOnProperty(actual, 'mean', 'get')
+      .and.callThrough()
+    expect(actual.mean).toEqual(3)
+    expect(spyMean).toHaveBeenCalled()
+  }) // mean
+  it('should have squareSum getter', () => {
+    const spySquareSum = spyOnProperty(actual, 'squareSum', 'get')
+      .and.callThrough()
     expect(actual.squareSum).toEqual(55)
+    expect(spySquareSum).toHaveBeenCalled()
+  }) // squareSum
+  it('should have variance getter', () => {
+    const spyVariance = spyOnProperty(actual, 'variance', 'get')
+      .and.callThrough()
     expect(actual.variance).toEqual(50)
-  }) // Getter values
+    expect(spyVariance).toHaveBeenCalled()
+  }) // actual
 }) // First describe

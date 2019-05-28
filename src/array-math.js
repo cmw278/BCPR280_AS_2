@@ -1,4 +1,4 @@
-exports.ArrayMath = class ArrayMath extends Array {
+class ArrayMath extends Array {
   constructor (newArrray = []) {
     super(...newArrray)
   }
@@ -6,6 +6,9 @@ exports.ArrayMath = class ArrayMath extends Array {
     return new Array(...this).reduce((sum, i) => {
       return sum + i
     }, 0)
+  }
+  get mean () {
+    return this.sum / this.length
   }
   get squareSum () {
     return new Array(...this).reduce((sum, i) => {
@@ -16,3 +19,5 @@ exports.ArrayMath = class ArrayMath extends Array {
     return this.length * this.squareSum - this.sum ** 2
   }
 }
+
+exports.ArrayMath = ArrayMath
