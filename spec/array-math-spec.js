@@ -1,9 +1,9 @@
 /* global describe it expect spyOnProperty beforeEach jasmine */
 const { ArrayMath } = require('../src/array-math')
 describe('ArrayMath class', () => {
-  var actual
+  let actual
   beforeEach(() => {
-    var x = [ 1, 2, 3, 4, 5 ]
+    let x = [ 1, 2, 3, 4, 5 ]
     actual = new ArrayMath(x)
   })
   it('should be defined', () => {

@@ -1,10 +1,10 @@
 /* global describe it expect spyOn spyOnProperty beforeEach */
 const { BivariateCalculator } = require('../src/bivariate-calculator')
 describe('Linear regression:', () => {
-  var actual
+  let actual
   beforeEach(() => {
-    var x = [ 130, 650, 99, 150, 128, 302, 95, 945, 368, 961 ]
-    var y = [ 186, 699, 132, 272, 291, 331, 199, 1890, 788, 1601 ]
+    let x = [ 130, 650, 99, 150, 128, 302, 95, 945, 368, 961 ]
+    let y = [ 186, 699, 132, 272, 291, 331, 199, 1890, 788, 1601 ]
     actual = new BivariateCalculator(x, y)
   })
   it('should have beta1 getter', () => {

@@ -15,8 +15,7 @@ class BivariateCalculator {
     return xy.sum
   }
   get r () {
-    let { x, y, sumXY } = this
-    let n = x.length
+    let { x, y, sumXY, scale: n } = this
     return (n * sumXY - x.sum * y.sum) /
       Math.sqrt(x.variance * y.variance)
   }

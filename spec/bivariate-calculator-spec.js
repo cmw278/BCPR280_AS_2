@@ -1,10 +1,10 @@
 /* global describe beforeEach it expect spyOnProperty spyOn */
 const { BivariateCalculator } = require('../src/bivariate-calculator')
 describe('BivariateCalculator class:', () => {
-  var actual
+  let actual
   beforeEach(() => {
-    var x = [1, 2]
-    var y = [4, 5]
+    let x = [1, 2]
+    let y = [4, 5]
     actual = new BivariateCalculator(x, y)
   })
   it('should be defined', () => {
