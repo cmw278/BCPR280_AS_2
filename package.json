@@ -26,5 +26,7 @@
     "jasmine": "^3.4.0",
     "standard": "*"
   },
-  "dependencies": {}
+  "dependencies": {
+    "mime-types": "^2.1.24"
+  }
 }

@@ -1,5 +1,5 @@
 /* global describe it expect spyOnProperty beforeEach jasmine */
-const { ArrayMath } = require('../src/array-math')
+const { ArrayMath } = require('../index')
 describe('ArrayMath class', () => {
   let actual
   beforeEach(() => {

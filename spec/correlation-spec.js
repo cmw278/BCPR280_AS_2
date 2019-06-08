@@ -1,5 +1,5 @@
 /* global describe it expect spyOnProperty beforeEach */
-const { BivariateCalculator } = require('../src/bivariate-calculator')
+const { BivariateCalculator } = require('../index')
 describe('Correlation:', () => {
   let actual
   beforeEach(() => {

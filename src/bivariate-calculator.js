@@ -1,4 +1,8 @@
-const { ArrayMath } = require('./array-math')
+try { // Expect to be used in node js
+  var ArrayMath = require('./array-math')
+} catch (err) { // But also work in the browser
+  console.log('it\'s ok, you can use me in the browser if you must...')
+}
 
 class BivariateCalculator {
   constructor (x, y) {
@@ -48,4 +52,4 @@ class BivariateCalculator {
   }
 }
 
-exports.BivariateCalculator = BivariateCalculator
+module.exports = BivariateCalculator
