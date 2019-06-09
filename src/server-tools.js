@@ -8,7 +8,7 @@ const { readFile } = fs.promises
     warn: 1
     debug: 2
 */
-const debugLevel = 3
+const debugLevel = 2
 
 // log files config
 let path = 'logs'

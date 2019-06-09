@@ -1,7 +1,7 @@
 const API = require('./api-definition')
 const { log, warn, nonFatalError, loadFile } = require('./server-tools')
 
-function apiCaller (request, response) {
+function apiCaller (request, response) { // sync / async conversion... Async error handling is able to be included here (cannot be defined when passed to html server)
   restfulAPI(request, response).catch(nonFatalError)
 }
 
@@ -12,8 +12,8 @@ async function restfulAPI (request, response) {
   let promise = await processRequest(apiRequest, data).catch(err => {
     nonFatalError(err.stack)
     return {
-      apiResponse: '',
-      contentType: 'text/plain',
+      apiResponse: JSON.stringify(err),
+      contentType: 'application/json',
       status: 500
     }
   })
@@ -39,10 +39,13 @@ function resolveURL (url) { // resolve url and return $request and $data
 
 function parseData (data) {
   try {
-    let params = data.split('&')
-      .map(param => param.split('='))
-    let parsedData = Object.create(null)
-    for (let [ key, value ] of params) parsedData[key] = value.split(',')
+    let params = data.split('&') // split into list of parameters
+      .map(param => param.split('=')) // split parameters into key => value pairs (delimited by '=')
+    let parsedData = Object.create(null) // create empty data object
+    for (let [ key, value ] of params) {
+      parsedData[key] = value.split(',') // split comma separated data into list of values
+        .map(aValue => JSON.parse(aValue)) // parse values as JSON (string == string, number == number)
+    }
     return {
       data: parsedData,
       error: false
@@ -75,7 +78,7 @@ async function processRequest (apiRequest, data) {
       if (!file) throw new Error('File did not read')
       return file
     } catch (err) {
-      warn(err)
+      nonFatalError(err)
       let pageNotFound = await loadFile('./418.html')
       pageNotFound.status = 418
       return pageNotFound

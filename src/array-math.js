@@ -1,6 +1,6 @@
 class ArrayMath extends Array {
-  constructor (newArrray = []) {
-    super(...newArrray)
+  constructor (newArray = []) {
+    super(...newArray)
   }
   get sum () {
     return new Array(...this).reduce((sum, i) => {

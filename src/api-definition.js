@@ -7,6 +7,7 @@ class APIDefinition extends null { // Static class for the definition of restful
   static array (data) { // returns results relevant to single-dimensional array math
     try {
       log('running array-math with data', JSON.stringify(data))
+      if (!data) throw new Error('No data given')
       let model = new ArrayMath(data.x)
       return {
         sum: model.sum,
@@ -27,9 +28,7 @@ class APIDefinition extends null { // Static class for the definition of restful
         sumXY: model.sumXY,
         scale: model.scale,
         r: model.r,
-        rSquared: model.correlation,
-        beta0: model.beta0,
-        beta1: model.beta1
+        rSquared: model.correlation
       }
     } catch (err) {
       warn(err.stack)

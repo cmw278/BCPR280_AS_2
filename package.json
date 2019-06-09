@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/cmw278/BCPR280_AS_2#readme",
   "devDependencies": {
+    "cucumber": "^5.1.0",
     "jasmine": "^3.4.0",
     "standard": "*"
   },
