@@ -43,8 +43,13 @@ function parseData (data) {
       .map(param => param.split('=')) // split parameters into key => value pairs (delimited by '=')
     let parsedData = Object.create(null) // create empty data object
     for (let [ key, value ] of params) {
-      parsedData[key] = value.split(',') // split comma separated data into list of values
-        .map(aValue => JSON.parse(aValue)) // parse values as JSON (string == string, number == number)
+      let parsedVal = value.split(',') // split comma separated data into list of values
+      try {
+        parsedData[key] = parsedVal.map(aValue => JSON.parse(aValue)) // map numbers to numbers
+      } catch (err) { // if value is not JSON compatible
+        log(`"${key}":"${value}" is not formatted as JSON, leaving in tact`) // print to debug log
+        parsedData[key] = value // return original string
+      }
     }
     return {
       data: parsedData,
