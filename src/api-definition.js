@@ -7,7 +7,7 @@ class APIDefinition extends null { // Static class for the definition of restful
   static array (data) { // returns results relevant to single-dimensional array math
     try {
       log('running array-math with data', JSON.stringify(data))
-      if (!data) throw new Error('No data given')
+      if (!data || !(data.x instanceof Array)) throw new Error('No data given')
       let model = new ArrayMath(data.x)
       return {
         sum: model.sum,

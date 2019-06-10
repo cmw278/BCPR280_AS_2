@@ -4,7 +4,7 @@
   "description": "Portfolio assignment completed during the third semester of my bachelor's degree",
   "main": "index.js",
   "scripts": {
-    "test": "standard && node test.js"
+    "test": "node test.js && cucumber-js && standard"
   },
   "repository": {
     "type": "git",

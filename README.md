@@ -113,9 +113,9 @@ Task
 
   - [ ] :eight: Create a RESTful web service for Nodejs that returns JSON data
     - [x] :mag: Analysis & design
-    - [ ] :memo: Unit testing plan
+    - [x] :memo: Unit testing plan
     - [x] :pen: Write Code
-    - [ ] :coffee: Run unit tests
+    - [x] :coffee: Run unit tests
     - [ ] :mortar_board: Complete documentation
 
 ---
@@ -132,4 +132,4 @@ Task
 
   - [ ] :keycap_ten: :cucumber: Provide Cucumber unit tests
     - [ ] :computer: cli App  *NodeJS*
-    - [ ] :envelope: RESTful Web Service  *NodeJS*
+    - [x] :envelope: RESTful Web Service  *NodeJS*
