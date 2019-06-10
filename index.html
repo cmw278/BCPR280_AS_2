@@ -2,9 +2,59 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>BCPR280 Assignment 2</title>
+    <title>BCPR280_AS_2 Portfolio Assignment</title>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        body {
+            min-height: 100vh;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        .card {
+            margin: 1rem;
+        }
+
+        .jumbotron {
+            margin-bottom: 0;
+        }
+    </style>
+
+    <!-- Custom Vue Components -->
+    <script src="src\vue-components\component-app-card.js"></script>
+    <script src="src\vue-components\component-app-input.js"></script>
+    <script src="src\vue-components\component-app-button.js"></script>
+    <script src="src\vue-components\component-app-correlation.js"></script>
+    <script src="src\vue-components\component-app-regression.js"></script>
+
   </head>
-  <body>
+
+  <body class="container-fluid d-flex flex-column justify-content-between">
+
+    <header class="jumbotron row align-items-center justify-content-center">
+      <h1>BCPR280_AS_2 Portfolio Assignment</h1>
+    </header>
+
+    <div id="vm-apps" class="row align-items-center justify-content-around">
+      <correlation-app></correlation-app>
+      <regression-app></regression-app>
+    </div>
+
+    <footer class="jumbotron row align-items-center justify-content-center">
+      <span>&copy;2019 Chris Wordsworth</span>
+    </footer>
+
+    <script>
+      // Code to mount Vue instance goes here
+      var vm = new Vue({ el: '#vm-apps' })
+    </script>
 
   </body>
 </html>

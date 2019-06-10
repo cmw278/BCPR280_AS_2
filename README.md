@@ -64,9 +64,9 @@ Task
 
 <span id="3" hidden></span>
 
-  - [ ] :three: Provide a user interface with Vuejs
-    - [ ] :mag: Analysis & design
-    - [ ] :pen: Write Code
+  - [x] :three: Provide a user interface with Vuejs
+    - [x] :mag: Analysis & design
+    - [x] :pen: Write Code
     - [ ] :mortar_board: Complete documentation
 
 ---
@@ -91,9 +91,9 @@ Task
 
 <span id="6" hidden></span>
 
-  - [ ] :six: Enhance the user interface with Bootstrap css
-    - [ ] :mag: Analysis & design
-    - [ ] :pen: Write Code
+  - [x] :six: Enhance the user interface with Bootstrap css
+    - [x] :mag: Analysis & design
+    - [x] :pen: Write Code
     - [ ] :mortar_board: Complete documentation
 
 ---
